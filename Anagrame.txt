@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+int main(){
+    char cuv1[51], cuv2[51];
+    cin >> cuv1 >> cuv2;
+    sort(cuv1 + 0, cuv1 + strlen(cuv1));
+    sort(cuv2 + 0, cuv2 + strlen(cuv2));
+    if (strcmp(cuv1, cuv2) == 0)
+        cout << "DA";
+    else
+        cout << "NU";
+    return 0;
+}

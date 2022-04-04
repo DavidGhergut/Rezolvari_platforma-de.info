@@ -1,0 +1,13 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int a, b, c;
+    cin >> a >> b >> c;
+    int v[] = {a,b,c};
+    sort(v, v + 3);
+    for (int i = 0; i < 3; i++)
+        cout << v[i] << ' ';
+    return 0;
+}
