@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int A, B, copie, p = 1;
+    cin >> A >> B;
+    copie = B;
+    while (copie){
+        p *= 10;
+        copie /= 10;
+    }
+    p /= 10;
+    while (B){
+        A = A * 10 + (B / p) % 10;
+        B %= p;
+        p /= 10;
+    }
+    cout << A;
+    return 0;
+}
+
