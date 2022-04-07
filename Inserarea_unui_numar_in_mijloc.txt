@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int A, B, i, p1 = 1, p2 = 1, nr1 = 0, nr2 = 0, rez, copie1, copie2;
+    cin >> A >> B;
+    copie1 = A;
+    copie2 = B;
+    while (copie1){
+        nr1++;
+        copie1 /= 10;
+    }
+    while (copie2){
+        nr2++;
+        copie2 /= 10;
+    }
+    for (i = 1; i <= nr1 / 2; i++)
+        p1 *= 10;
+    while (nr2){
+        p2 *= 10;
+        nr2--;
+    }
+    rez = (A / p1 * p2 + B) * p1 + A % p1;
+    cout << rez;
+    return 0;
+}
+

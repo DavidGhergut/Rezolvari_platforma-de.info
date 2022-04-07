@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int N, copie, s = 0, nr = 0, cif;
+    cin >> N;
+    copie = N;
+    while (copie){
+        s += copie % 10;
+        copie /= 10;
+    }
+    while (N){
+        cif = N % 10;
+        if ((s - cif) % 3 == 0)
+            nr++;
+        N /= 10;
+    }
+    cout << nr;
+    return 0;
+}
