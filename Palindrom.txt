@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int copie, N, o = 0;
+    cin >> N;
+    copie = N;
+    while (copie){
+        o = o * 10 + copie % 10;
+        copie /= 10;
+    }
+    if (N == o)
+        cout << "DA";
+    else
+        cout << "NU";
+    return 0;
+}

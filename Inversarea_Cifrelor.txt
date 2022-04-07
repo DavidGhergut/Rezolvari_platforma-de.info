@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+int v[10];
+int main(){
+    int N, copie, p = 1, rez = 0, c1, c2;
+    cin >> N;
+    copie = N;
+    while (copie){
+        p *= 10;
+        copie /= 10;
+    }
+    p /= 10;
+    while (N){
+        c1 = N / p;
+        N %= p;
+        p /= 10;
+        c2 = N / p;
+        N %= p;
+        p /= 10;
+        rez = rez * 10 + c2;
+        rez = rez * 10 + c1;
+    }
+    cout << rez;
+    return 0;
+}
+
