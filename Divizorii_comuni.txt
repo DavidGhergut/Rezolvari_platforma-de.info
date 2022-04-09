@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int A, B, r, d;
+    cin >> A >> B;
+    while (B != 0){
+        r = A % B;
+        A = B;
+        B = r;
+    }
+    for (d = 1; d <= A / 2; d++){
+        if (A % d == 0)
+            cout << d << ' ';
+    }
+    cout << A;
+    return 0;
+}
+

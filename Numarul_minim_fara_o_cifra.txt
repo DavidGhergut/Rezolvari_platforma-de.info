@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n, p = 10, minim = 1000000001, nr = 0, l = 0, copie, i;
+    cin >> n;
+    copie = n;
+    while (copie){
+        l++;
+        copie /= 10;
+    }
+    for (i = 1; i <= l; i++){
+        nr = n / p * (p / 10) + n % (p / 10);
+        p *= 10;
+        if (nr < minim)
+            minim = nr;
+    }
+    cout << minim;
+    return 0;
+}

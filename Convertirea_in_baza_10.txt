@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+int v[10];
+int main(){
+    int b, x, nr = 0, p = 1, n = 0, i, rez = 0;
+    cin >> b;
+    while (cin >> x && x < b){
+        n++;
+        v[n] = x;
+    }
+    for (i = n; i >= 1; i--){
+        rez += v[i] * p;
+        p *= b;
+    }
+    cout << rez;
+    return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int n, b, r, rez = 0, p = 1;
+    cin >> n >> b;
+    while (n){
+        r = n % b;
+        rez += r * p;
+        p *= 10;
+        n /= b;
+    }
+    cout << rez;
+    return 0;
+}
