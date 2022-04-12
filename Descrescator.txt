@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int a, b, aux;
+    cin >> a >> b;
+    if (b > a){
+        aux = b;
+        b = a;
+        a = aux;
+    }
+    cout << a << ' ' << b;
+    return 0;
+}

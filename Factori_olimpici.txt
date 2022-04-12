@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int N, F = 2, P, F_maxim = 0, P_maxim = 0;
+    cin >> N;
+    while (N > 1){
+        P = 0;
+        while (N % F == 0){
+            P++;
+            N /= F;
+        }
+        if (P > P_maxim){
+            P_maxim = P;
+            F_maxim = F;
+        }
+        else if (P == P_maxim){
+            if (F > F_maxim)
+                F_maxim = F;
+        }
+        F++;
+    }
+    cout << F_maxim << ' ' << P_maxim;
+    return 0;
+}
