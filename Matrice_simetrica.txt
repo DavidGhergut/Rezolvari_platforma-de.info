@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int a[1001][1001];
+int main(){
+    int N, M, i, j, ok = 1;
+    cin >> N >> M;
+    for (i = 1; i <= N; i++){
+        for (j = 1; j <= M; j++)
+            cin >> a[i][j];
+    }
+    for (j = M / 2; j >= 1; j--){
+        for (i = 1; i <= N; i++){
+            if (a[i][j] != a[i][M - j + 1])
+                ok = 0;
+        }
+    }
+    if (ok == 1)
+        cout << "DA";
+    else
+        cout << "NU";
+    return 0;
+}

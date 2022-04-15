@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+int a[1001][1001];
+int main(){
+    int n, i, j, nr;
+    cin >> n;
+    nr = n - 1;
+    for (i = 1; i <= n; i++){
+        for (j = i; j <= n; j++)
+            a[i][j] = a[j][i] = nr;
+        nr--;
+    }
+    for (i = 1; i <= n; i++){
+        for (j = 1; j <= n; j++)
+            cout << a[i][j] << ' ';
+        cout << '\n';
+    }
+    return 0;
+}

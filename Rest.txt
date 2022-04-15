@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+int sir[2002];
+int main(){
+    int n, p, i, x, poz = 1;
+    cin >> n >> p;
+    for (i = 1; i <= n; i++){
+        cin >> x;
+        if (x % 2 == 0){
+            sir[poz] = x % p;
+            poz++;
+            sir[poz] = x;
+            poz++;
+        }
+        else{
+            sir[poz] = x;
+            poz++;
+        }
+    }
+    poz--;
+    for (i = 1; i <= poz; i++)
+        cout << sir[i] << ' ';
+    return 0;
+}

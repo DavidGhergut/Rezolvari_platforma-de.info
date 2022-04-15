@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int ciur[10001];
+int main(){
+    int N, nr = 2, i, j;
+    cin >> N;
+    for (i = 2; i * 2 <= 10001; i++){
+        if (ciur[i] == 0){
+            for (j = 2 * i; j <= 10001; j += i)
+                ciur[j]++;
+        }
+    }
+    while (N){
+        if (ciur[nr] == 0){
+            cout << nr << ' ';
+            N--;
+        }
+        nr++;
+    }
+    return 0;
+}
+

@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    int N, x, i, minim, poz1, maxim, poz2;
+    cin >> N;
+    cin >> x;
+    minim = maxim = x;
+    poz1 = poz2 = 0;
+    for (i = 1; i < N; i++){
+        cin >> x;
+        if (x > maxim){
+            maxim = x;
+            poz1 = i;
+        }
+        else if (x < minim){
+            minim = x;
+            poz2 = i;
+        }
+    }
+    cout << maxim << ' ' << minim << ' ' << poz1 << ' ' << poz2;
+    return 0;
+}
